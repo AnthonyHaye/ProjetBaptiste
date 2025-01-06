@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BellePage App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>BellePage App</h1>
+    <p>Créez des livres personnalisés pour enfants en quelques clics !</p>
+
+    <h3>1. Générer une couverture</h3>
+    <input id="title" type="text" placeholder="Titre de l'histoire" required>
+    <input id="profession" type="text" placeholder="Profession (ex : Pompier)">
+    <textarea id="prompt" rows="3" placeholder="Description de la couverture"></textarea>
+    <button onclick="generateCover()">Générer Couverture</button>
+    <img id="coverImage" alt="Couverture générée" style="width:100%; display:none; margin-top:10px;">
+
+    <h3>2. Ajouter une photo d'enfant</h3>
+    <input type="file" id="photoUpload">
+    <button onclick="uploadPhoto()">Téléverser Photo</button>
+    <p id="photoResult"></p>
+
+    <h3>3. Générer les chapitres</h3>
+    <input id="theme" type="text" placeholder="Thème (ex : Rêves)">
+    <button onclick="generateChapters()">Générer Chapitres</button>
+    <pre id="chaptersResult" style="text-align:left;"></pre>
+  </div>
+  <script src="/js/api.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
